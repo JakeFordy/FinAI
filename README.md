@@ -1,8 +1,20 @@
 # FinAI - Liminal AI Sales Finder Agent
 
+<p align="center">
+  <img src="https://www.becomeliminal.com/assets/logo-orange-7Sg2BzUP.webp" alt="Liminal Logo" width="200"/>
+</p>
+
 > 🏆 HackSouthWest - Most Innovative Hack | Superteam UK AI Agents in Blockchain Banking - Best Documentation & Outreach | Built in 24 hours
 
 An AI-powered financial agent that analyses a user's transaction history, finds cheaper alternatives to their recent purchases, and delivers recommendations directly within Liminal's chat interface - helping users spend smarter without sacrificing quality.
+
+## Demo
+https://github.com/JakeFordy/FinAI/releases/download/v1.0/finAI.demo.mp4
+
+<p align="center">
+  <img src="https://github.com/JakeFordy/FinAI/releases/download/v1.0/finAI_demoPic1.png" alt="FinAI Screenshot 1" width="49%"/>
+  <img src="https://github.com/JakeFordy/FinAI/releases/download/v1.0/finAI_demoPic2.png" alt="FinAI Screenshot 2" width="49%"/>
+</p>
 
 ## What It Does
 
@@ -137,10 +149,17 @@ FinAI was built as a team project during the Hackathons UK x HackSouthWest 2026 
 The project is a proof of concept exploring how AI-driven financial analysis can be integrated into blockchain-based banking systems to help users spend more efficiently.
 
 ### Special Thanks
-
+A massive thank you to my amazing team for making this happen in 24 hours:
 - Sholto Coulter
 - Millie Clark
 - Theo Swan
 - Tamara Spalding
+
+And to the organisers and sponsors who put on a brilliant event:
+- [Superteam UK](https://www.linkedin.com/company/superteamuk/)
+- [Hack South West](https://www.linkedin.com/company/hack-south-west/)
+- [Hackathons UK](https://www.hackathons.org.uk/)
+- [Exeter Computer Science Society (ExCS)](https://excs.uk/)
+- [Liminal](https://www.becomeliminal.com/)
 
 > Showcase fork - original submission: [src238/Untitled-AI](https://github.com/src238/Untitled-AI)
