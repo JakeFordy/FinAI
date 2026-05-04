@@ -1,3 +1,22 @@
+# Environment
 .env
 *.log
+
+# macOS
 .DS_Store
+
+# Node / frontend
+node_modules/
+dist/
+build/
+.vite/
+
+# Go build artifacts
+*.exe
+*.test
+*.out
+/finai
+/main
+
+# Editor / tool config
+.obsidian/
