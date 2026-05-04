@@ -1,69 +1,56 @@
-# Liminal AI Sales Finder Agent
+# FinAI - Liminal AI Sales Finder Agent
 
-## Overview
-The **Liminal AI Sales Finder Agent** is an intelligent assistant designed to help Liminal account holders make better purchasing decisions. By analysing a user’s historical transaction data, the agent identifies cheaper or more suitable alternative products and presents clear, actionable recommendations directly within Liminal’s chat interface.
+> 🏆 HackSouthWest - Most Innovative Hack | Superteam UK AI Agents in Blockchain Banking - Best Documentation & Outreach | Built in 24 hours
 
-The goal is to reduce unnecessary spending, reduce manual product research, and provide users with confidence that they are making informed and ethical purchasing decisions.
+An AI-powered financial agent that analyses a user's transaction history, finds cheaper alternatives to their recent purchases, and delivers recommendations directly within Liminal's chat interface - helping users spend smarter without sacrificing quality.
 
-## What Software Are We Creating?
-We are designing a **Sales Finder AI Agent** that analyses past purchases made by a Liminal user and determines whether more cost-effective or better-suited alternatives exist.
+## What It Does
 
-The system is split into four core components:
+FinAI is a financial assistant that sits alongside a user's Liminal account and helps them spend smarter. It displays spending patterns through graphs and tables, runs continuous AI analysis in the background, and surfaces insights directly in the interface - without the user having to ask.
 
-### 1. Transaction Analysis
-Extracts transaction context and interprets the gathered data from a user’s previous transactions, including product type, category, and price.
+**Spending Overview** - Visualises transaction history in organised graphs and tables so users can understand their spending patterns at a glance.
 
-### 2. Competitor Finder
-The AI agent then scrapes the web to search for potential viable alternative products or providers that come at a lower cost to the account holder while still fulfilling the key requirements / aspects of the original product.
-### 3. Product Comparison
-Compares the original purchase against the potential alternatives, weighing differences in price, value, drawbacks and potential benefits.
+**Budget Planner** - Users can set a monthly budget target and see in real time whether they're on track, saving, or overspending.
 
-### 4. Chat Output Agent
-Sends recommendations and insights to Liminal’s chat system in a clear, readable, and user-friendly format, Providing the alternative, it's price, how much the account holder will save and a link to the product.
+**AI Insights** - A background analysis loop continuously scans recent purchases and finds cheaper, good-quality alternatives. Findings are surfaced on a live notice board alongside alerts about suspicious transactions and price increases on frequent purchases.
 
-## Project Aim
-This project is designed to align with Liminal’s values of **user consent, privacy, and transparency**. The agent only analyses authorised transaction data and provides explainable recommendations, empowering account holders to make the most efficient use of their money, especially in a day and age of a bleak cost of living.
+**Subscription Tracker** - Surfaces all recurring payments in one place so users can easily spot and cancel services they no longer need.
 
-## Goals
-Our primary goals for this project are:
+**AI Chatbot** - Users can chat directly with Nim, the AI agent, to ask questions about their spending, get financial advice, or dig into specific transactions.
 
-- Develop a **professional, modular system** that can be adapted or extended by a second-party developer
-- Minimise the need for manual product research by users, reducing uncertainty and decision fatigue
-- Help users feel confident that their purchases are **cost-effective, reliable, and ethically sourced**
-- This project aims to produce a proof of concept for a potential framework that liminal could build upon when creating the foundation for the next age of finances and private banking.
+Built to align with Liminal's values of user consent, privacy, and transparency - the agent only analyses authorised transaction data and provides clear, explainable recommendations.
 
-## Features
-The Liminal AI Sales Finder Agent currently includes:
+## Tech Stack
 
-- Analysis of recent transaction history
-- Alternative product suggestions based on past purchases
-- A recent transactions list for contextual recommendations
-- A chatbot interface that allows users to communicate directly with the agent through Liminal and perform transactional operations
-- Insight generation that explains *why* an alternative may be beneficial
+- **Backend** - Go, built on the `nim-go-sdk` WebSocket server
+- **AI** - Claude (Anthropic) via `anthropic-sdk-go`
+- **Frontend** - React + TypeScript (Vite), using the `nim-chat` widget
+- **Banking Integration** - Liminal financial APIs (balance, transactions, payments)
 
 ## Project Structure
 
 ```
-finai/
-├── analysis.go           # Background AI loop: product alternatives & large-tx monitor
-├── config.go             # Environment config & application constants
-├── handlers.go           # HTTP endpoints: /api/alerts, /api/transactions, /api/recurring-payments
-├── main.go               # Server wiring, tool registration & startup
-├── prompts.go            # System prompt for the Nim AI agent
-├── recurringPayments.go  # AI-powered recurring payment detection
-├── tools.go              # Custom tools: spending analyser, product search, alerts
-├── transactions.go       # Mock transaction file parsing
-├── types.go              # Shared type definitions
-├── go.mod / go.sum
-├── mock_transactions.txt # Sample transaction data
+FinAI/
+├── main.go                   # Entry point, server setup, background loops
+├── analysis.go               # AI background analysis loop + large transaction monitor
+├── handlers.go               # HTTP endpoints (alerts, transactions, recurring payments)
+├── prompts.go                # Claude system prompt and AI personality
+├── recurringPayments.go      # AI-powered recurring payment detection
+├── transactions.go           # Transaction parsing and filtering utilities
+├── tools.go                  # Custom Claude tools (spending analyser, product search, alerts)
+├── types.go                  # Shared type definitions
+├── config.go                 # App config and constants
+├── mock_transactions.txt     # Sample transaction data for demo
+├── go.mod
+├── go.sum
 ├── .env.example
-│
 ├── frontend/
-│   ├── main.tsx          # Root App component + WebSocket client
 │   ├── index.html
+│   ├── main.tsx              # App component + WebSocket client
 │   ├── styles.css
-│   ├── package.json
 │   ├── vite.config.ts
+│   ├── package.json
+│   ├── tsconfig.json
 │   └── src/
 │       ├── components/
 │       │   ├── BudgetPlanner.tsx
@@ -76,49 +63,84 @@ finai/
 │       │   └── formatters.tsx
 │       ├── constants.ts
 │       └── types.ts
-│
-└── sdk/                  # nim-go-sdk — local dependency (replace directive in go.mod)
-    ├── core/             # Tool, ToolExecutor, ToolParams interfaces
-    ├── engine/           # Conversation engine, guardrails, session management
-    ├── executor/         # HTTP & gRPC executors for Liminal API
-    ├── server/           # WebSocket server & protocol
-    ├── store/            # Conversation storage (Ristretto cache)
-    ├── subagent/         # Sub-agent delegation & presets
-    └── tools/            # Tool builder DSL & Liminal tool definitions
+└── sdk/                      # nim-go-sdk local dependency
+    ├── core/                 # Tool, ToolExecutor interfaces
+    ├── engine/               # Conversation engine, session, guardrails
+    ├── executor/             # HTTP + gRPC executors for Liminal API
+    ├── server/               # WebSocket server + protocol
+    ├── store/                # Conversation storage
+    ├── subagent/             # Sub-agent delegation
+    └── tools/                # Tool builder DSL + Liminal tool definitions
 ```
 
-## How Does This Help Customers?
-This tool empowers Liminal users to make smarter financial decisions by:
+## Key Features
 
-- Identifying cheaper or more suitable alternatives quickly
-- Saving time by eliminating tedious manual research
-- Increasing transparency around spending choices
-- Helping users maximise value while providing a secure, safe and trustworthy system that works for their interests, not against them
+- **Background analysis loop** - Automatically checks recent purchases every 5 seconds and posts savings opportunities to the notice board
+- **Large transaction alerts** - Flags any outgoing transaction over $1,000 in real time
+- **Recurring payment detection** - Uses AI to identify subscriptions and repeating charges, surfacing all recurring payments in one place
+- **Savings calculator** - Shows at a glance whether a user is heading into the red based on their spending patterns
+- **Fraud warning system** - Postmortem analysis of purchases to flag suspicious or unusual transactions
+- **Conversational agent** - Users can ask Nim (the AI) directly about their purchases, spending patterns, or alternatives for specific products
+- **Modular tool system** - Custom Claude tools for reading transactions, searching alternatives, and posting/reading alerts
 
-Overall, it enables users to spend more efficiently while staying informed and in control of their finances, a service which is now a luxury reserved for the super rich of the modern world.
+## Getting Started
 
-## Challenges Encountered
-During development, we encountered several technical issues, including:
+### Prerequisites
 
-- Difficulties connecting to required APIs
-- Network and Wi-Fi instability
-- Environment variable misconfiguration (incorrectly naming the `.env` file), which caused significant debugging delays
+- Go 1.21+
+- Node.js 18+
+- An Anthropic API key
 
-These challenges provided valuable experience in debugging, configuration management, and development workflows.
+### Setup
 
-## Limitations and Future Improvements
-While functional, the current version of the project has limitations:
+```bash
+cp .env.example .env
+# Add your ANTHROPIC_API_KEY to .env
+```
 
-- Limited time for user testing and feedback integration
-- Limited testing with real world data
-- Alternative suggestions are based on recent insights rather than long-term learning
-- Product matching could be improved with richer datasets and broader competitor coverage
-- 
+### Run the backend
 
-Future improvements could include:
+```bash
+go run .
+```
 
-- More advanced pattern analysis over longer transaction histories
-- Improved recommendation accuracy using additional data sources
-- Enhanced explainability and customisation options for users
-- Improved project structure to allow for long term maintenance and development is required
-- Adding further capabilities to the filter and search features for transactions
+### Run the frontend
+
+```bash
+cd frontend
+npm install
+npm run dev
+```
+
+The WebSocket server runs at `ws://localhost:8080/ws` and the alerts API at `http://localhost:8080/api/alerts`.
+
+## Challenges & Limitations
+
+Built under time pressure, so a few rough edges remain:
+
+- Competitor suggestions are based on AI inference rather than live pricing data
+- Limited to mock transaction data - real Liminal transaction integration was partially blocked by API connectivity issues during the hackathon
+- Product matching accuracy could be improved with richer datasets and broader retailer coverage
+
+## What's Next
+
+- Expanded blockchain integration with support for multiple cryptocurrencies
+- Improved competitor search using live pricing data rather than AI inference
+- Long-term spending pattern analysis for smarter recommendations
+- Enhanced fraud detection with more granular transaction signals
+
+## About
+> finAI - the final AI for finance
+
+FinAI was built as a team project during the Hackathons UK x HackSouthWest 2026 x Liminal Hackathon. This repo is a cleaned-up showcase fork of the original submission - the codebase has been restructured for readability but the core logic is unchanged from what was demoed on the day.
+
+The project is a proof of concept exploring how AI-driven financial analysis can be integrated into blockchain-based banking systems to help users spend more efficiently.
+
+### Special Thanks
+
+- Sholto Coulter
+- Millie Clark
+- Theo Swan
+- Tamara Spalding
+
+> Showcase fork - original submission: [src238/Untitled-AI](https://github.com/src238/Untitled-AI)
