@@ -1,20 +1,43 @@
 # FinAI - Liminal AI Sales Finder Agent
 
 <p align="center">
-  <img src="https://www.becomeliminal.com/assets/logo-orange-7Sg2BzUP.webp" alt="Liminal Logo" width="200"/>
+  <img src="https://www.becomeliminal.com/assets/logo-orange-7Sg2BzUP.webp" alt="Liminal Logo" width="150"/>
+  <br/>
+  <em>Built for Liminal</em>
 </p>
 
-> 🏆 HackSouthWest - Most Innovative Hack | Superteam UK AI Agents in Blockchain Banking - Best Documentation & Outreach | Built in 24 hours
+<p align="center">
+  <img src="https://img.shields.io/badge/Go-00ADD8?style=for-the-badge&logo=go&logoColor=white" alt="Go"/>
+  <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React"/>
+  <img src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript"/>
+  <img src="https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white" alt="Vite"/>
+  <img src="https://img.shields.io/badge/Claude-D97757?style=for-the-badge&logo=anthropic&logoColor=white" alt="Claude"/>
+</p>
 
-An AI-powered financial agent that analyses a user's transaction history, finds cheaper alternatives to their recent purchases, and delivers recommendations directly within Liminal's chat interface - helping users spend smarter without sacrificing quality.
+<p align="center">
+  <img src="https://img.shields.io/badge/🏆_Most_Innovative_Hack-HackSouthWest-orange?style=flat-square" alt="Most Innovative Hack"/>
+  <img src="https://img.shields.io/badge/🏆_Best_Documentation_%26_Outreach-Superteam_UK_AI_Agents-blue?style=flat-square" alt="Best Documentation"/>
+  <img src="https://img.shields.io/badge/Built_in-24_hours-red?style=flat-square" alt="Built in 24 hours"/>
+</p>
+
+<p align="center">
+  An AI-powered financial agent that analyses a user's transaction history, finds cheaper alternatives to their recent purchases, and delivers recommendations directly within Liminal's chat interface - helping users spend smarter without sacrificing quality.
+</p>
+
+---
 
 ## Demo
-https://github.com/JakeFordy/FinAI/releases/download/v1.0/finAI.demo.mp4
+
+<p align="center">
+  <a href="https://github.com/JakeFordy/FinAI/releases/download/v1.0/finAI.demo.mp4">▶️ Watch Full Demo</a>
+</p>
 
 <p align="center">
   <img src="https://github.com/JakeFordy/FinAI/releases/download/v1.0/finAI_demoPic1.png" alt="FinAI Screenshot 1" width="49%"/>
   <img src="https://github.com/JakeFordy/FinAI/releases/download/v1.0/finAI_demoPic2.png" alt="FinAI Screenshot 2" width="49%"/>
 </p>
+
+---
 
 ## What It Does
 
@@ -24,13 +47,31 @@ FinAI is a financial assistant that sits alongside a user's Liminal account and 
 
 **Budget Planner** - Users can set a monthly budget target and see in real time whether they're on track, saving, or overspending.
 
+> ![Budget Planner GIF](BUDGET_PLANNER_GIF_URL)
+
 **AI Insights** - A background analysis loop continuously scans recent purchases and finds cheaper, good-quality alternatives. Findings are surfaced on a live notice board alongside alerts about suspicious transactions and price increases on frequent purchases.
+
+<p align="center">
+  <img src="AI_INSIGHTS_SCREENSHOT_1_URL" alt="AI Insights - Alternative Found" width="32%"/>
+  <img src="AI_INSIGHTS_SCREENSHOT_2_URL" alt="AI Insights - Suspicious Activity" width="32%"/>
+  <img src="AI_INSIGHTS_SCREENSHOT_3_URL" alt="AI Insights - Price Increase" width="32%"/>
+</p>
 
 **Subscription Tracker** - Surfaces all recurring payments in one place so users can easily spot and cancel services they no longer need.
 
+> ![Recurring Payments GIF](RECURRING_PAYMENTS_GIF_URL)
+
+**Graph Analysis** - Visual breakdown of spending patterns across categories, merchants, and time periods.
+
+> ![Graph Analysis GIF](GRAPH_ANALYSIS_GIF_URL)
+
 **AI Chatbot** - Users can chat directly with Nim, the AI agent, to ask questions about their spending, get financial advice, or dig into specific transactions.
 
+> ![AI Chatbot GIF](AI_CHATBOT_GIF_URL)
+
 Built to align with Liminal's values of user consent, privacy, and transparency - the agent only analyses authorised transaction data and provides clear, explainable recommendations.
+
+---
 
 ## Tech Stack
 
@@ -38,6 +79,8 @@ Built to align with Liminal's values of user consent, privacy, and transparency 
 - **AI** - Claude (Anthropic) via `anthropic-sdk-go`
 - **Frontend** - React + TypeScript (Vite), using the `nim-chat` widget
 - **Banking Integration** - Liminal financial APIs (balance, transactions, payments)
+
+---
 
 ## Project Structure
 
@@ -85,6 +128,8 @@ FinAI/
     └── tools/                # Tool builder DSL + Liminal tool definitions
 ```
 
+---
+
 ## Key Features
 
 - **Background analysis loop** - Automatically checks recent purchases every 5 seconds and posts savings opportunities to the notice board
@@ -94,6 +139,8 @@ FinAI/
 - **Fraud warning system** - Postmortem analysis of purchases to flag suspicious or unusual transactions
 - **Conversational agent** - Users can ask Nim (the AI) directly about their purchases, spending patterns, or alternatives for specific products
 - **Modular tool system** - Custom Claude tools for reading transactions, searching alternatives, and posting/reading alerts
+
+---
 
 ## Getting Started
 
@@ -126,6 +173,8 @@ npm run dev
 
 The WebSocket server runs at `ws://localhost:8080/ws` and the alerts API at `http://localhost:8080/api/alerts`.
 
+---
+
 ## Challenges & Limitations
 
 Built under time pressure, so a few rough edges remain:
@@ -134,6 +183,8 @@ Built under time pressure, so a few rough edges remain:
 - Limited to mock transaction data - real Liminal transaction integration was partially blocked by API connectivity issues during the hackathon
 - Product matching accuracy could be improved with richer datasets and broader retailer coverage
 
+---
+
 ## What's Next
 
 - Expanded blockchain integration with support for multiple cryptocurrencies
@@ -141,14 +192,18 @@ Built under time pressure, so a few rough edges remain:
 - Long-term spending pattern analysis for smarter recommendations
 - Enhanced fraud detection with more granular transaction signals
 
+---
+
 ## About
-> finAI - the final AI for finance
+
+> *fin[ance] AI - the final AI for finance*
 
 FinAI was built as a team project during the Hackathons UK x HackSouthWest 2026 x Liminal Hackathon. This repo is a cleaned-up showcase fork of the original submission - the codebase has been restructured for readability but the core logic is unchanged from what was demoed on the day.
 
 The project is a proof of concept exploring how AI-driven financial analysis can be integrated into blockchain-based banking systems to help users spend more efficiently.
 
 ### Special Thanks
+
 A massive thank you to my amazing team for making this happen in 24 hours:
 - Sholto Coulter
 - Millie Clark
@@ -156,10 +211,13 @@ A massive thank you to my amazing team for making this happen in 24 hours:
 - Tamara Spalding
 
 And to the organisers and sponsors who put on a brilliant event:
-- [Superteam UK](https://www.linkedin.com/company/superteamuk/)
-- [Hack South West](https://www.linkedin.com/company/hack-south-west/)
-- [Hackathons UK](https://www.hackathons.org.uk/)
-- [Exeter Computer Science Society (ExCS)](https://excs.uk/)
-- [Liminal](https://www.becomeliminal.com/)
+
+<p align="center">
+  <a href="https://www.linkedin.com/company/superteamuk/"><img src="https://img.shields.io/badge/Superteam_UK-9945FF?style=for-the-badge" alt="Superteam UK"/></a>
+  <a href="https://www.linkedin.com/company/hack-south-west/"><img src="https://img.shields.io/badge/Hack_South_West-E85D26?style=for-the-badge" alt="Hack South West"/></a>
+  <a href="https://www.hackathons.org.uk/"><img src="https://img.shields.io/badge/Hackathons_UK-1A1A2E?style=for-the-badge" alt="Hackathons UK"/></a>
+  <a href="https://excs.uk/"><img src="https://img.shields.io/badge/ExCS-003865?style=for-the-badge" alt="ExCS"/></a>
+  <a href="https://www.becomeliminal.com/"><img src="https://img.shields.io/badge/Liminal-FF6B35?style=for-the-badge" alt="Liminal"/></a>
+</p>
 
 > Showcase fork - original submission: [src238/Untitled-AI](https://github.com/src238/Untitled-AI)
