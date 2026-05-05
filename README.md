@@ -107,19 +107,19 @@ Users can set a monthly budget target and see in real time whether they're on tr
 
 <td width="50%">
   <p align="center">
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <img src="https://github.com/user-attachments/assets/0b666946-6395-49ee-b308-b245ae771a3f" alt="AI Insights - Large Transaction Alert" width="35%" style="vertical-align: middle;"/>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <img src="https://github.com/user-attachments/assets/0b666946-6395-49ee-b308-b245ae771a3f" alt="AI Insights - Large Transaction Alert" width="35%" style="vertical-align: middle;"/>      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     <img src="https://github.com/user-attachments/assets/83c029d2-a567-4304-8175-172046f4379f" alt="AI Insights - Alternative Found 1" width="35%" style="vertical-align: middle;"/>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
   </p>
 </td>
 <td width="50%" align="center" valign="middle">
 <br/>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   
 ### 📰 AI Insights
 A background analysis loop continuously scans recent purchases and finds cheaper, good-quality alternatives, as well as flagging suspicious transactions and price increases on frequent purchases.
-
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    
 <br/>
 
 </td>
