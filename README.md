@@ -1,4 +1,4 @@
-# FinAI - Liminal AI Sales Finder Agent
+# FinAI - Liminal AI Financial Assistant
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/1b95e4a2-77d6-4dfb-bbfb-54501b18f43e" alt="Liminal Logo" height="80"/>
