@@ -35,7 +35,7 @@
   <video src="https://github.com/user-attachments/assets/1a7f7fae-516a-448f-99a5-e403e26da5ee" width="80%" controls></video>
 </p>
 <p align="center">
-  <a href="https://github.com/JakeFordy/FinAI/releases/download/v1.0/finAI.demo.mp4">⬇️ Download Full Demo</a> &nbsp;|&nbsp;
+  <a href="https://github.com/JakeFordy/FinAI/releases/download/v1.0/finAI.demo.mp4">⬇️ Download Full Video</a> &nbsp;|&nbsp;
   <a href="https://hack-south-west.devpost.com/">🏆 Devpost Submission</a>
 </p>
 
